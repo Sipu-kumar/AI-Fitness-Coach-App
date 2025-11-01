@@ -45,4 +45,9 @@ INSTRUCTOR_PASSWORD=your_custom_password
 
 [![Watch the demo](videos/demo-thumbnail.png)](https://github.com/Sipu-kumar/AI-Fitness-Coach-App/raw/main/videos/demo.mp4)
 
+## 🎥 Demo Video
+
+🎬 [Click here to watch the demo video](https://github.com/Sipu-kumar/AI-Fitness-Coach-App/raw/main/videos/demo.mp4)
+
+
 
