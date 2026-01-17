@@ -1,6 +1,101 @@
-# BMI Fullstack Starter (Auth - Sessions)
+🧑‍🏫 Roles in the System
+   👤 User
+      --Register & login
+      --Calculate BMI
+      -- View BMI history
+      --Receive assigned diet plans
+      --Follow weekly meal schedules
+      --Track progress
+      
+  🧑‍⚕️ Instructor / Personal Trainer
+         --View all users
+         --View user BMI records
+         --Analyze BMI categories
+         --Assign diet plans:
+         --Weight Loss
+         --Weight Gain
+         --Maintain Weight
+         --Create weekly meal plans
+         --Monitor user progress 
 
-## Quick start
+   🛠 Tech Stack
+     ------Frontend
+           --React (Vite)
+           --React Router DOM
+           --Axios
+           --CSS
+
+  ------Backend
+           --Node.js
+           --Express.js
+           --MongoDB
+           --Mongoose
+           --bcrypt
+           --express-session
+           --dotenv
+-------Database
+           --MongoDB (Local)
+           --MongoDB Compass
+
+📦 MongoDB Database Design 
+    Database name:  bmi_calculator
+| Collection    | Purpose                                  |
+| ------------- | ---------------------------------------- |
+| `users`       | Stores user & instructor accounts        |
+| `bmis`        | Stores BMI calculations                  |
+| `bmirecords`  | Stores BMI history                       |
+| `dietplans`   | Stores diet plans created by instructors |
+
+📁 Project Structure
+   bmi-no-auth/
+│
+├── backend/
+│   ├── db/
+│   │   └── Connection.js
+│   ├── models/
+│   │   ├── UserSchemas.js
+│   │   ├── BmiSchemas.js
+│   │   └── DietPlanSchema.js
+│   ├── routes/
+│   │   ├── Auth.js
+│   │   ├── UserRoutes.js
+│   │   ├── Bmi.js
+│   │   └── Diet.js
+│   ├── server.js
+│   └── .env
+│
+├── frontend/
+│   ├── src/
+│   │   ├── Components/
+│   │   ├── Pages/
+│   │   ├── Instructor/
+│   │   └── User/
+│   ├── App.jsx
+│   │── main.jsx
+│   └── vite.config.js
+│
+└── README.md
+
+⚙️ Installation & Setup
+     1️⃣ MongoDB Setup (Using Compass)
+         1. Install MongoDB Community Server
+         2. Open MongoDB Compass
+         3. Connect using:
+              mongodb://127.0.0.1:27017
+    2️⃣ Backend Setup
+        cd backend
+        npm install
+
+  Create a .env file:   
+      MONGODB_URL=mongodb://127.0.0.1:27017/bmi_calculator
+      PORT=5000
+      SALT=10
+      SESSION_SECRET=supersecret
+      
+  Start the backend server:  
+      npm start
+  Backend will run at:
+       http://localhost:5000
 
 Backend:
 - cd backend
@@ -35,6 +130,16 @@ You can customize the instructor credentials by setting these environment variab
 INSTRUCTOR_LOGIN_ID=your_custom_login_id
 INSTRUCTOR_PASSWORD=your_custom_password
 ```
+
+📊 BMI Categories Logic
+| BMI Range | Category    |
+| --------- | ----------- |
+| < 18.5    | Underweight |
+| 18.5–24.9 | Normal      |
+| 25–29.9   | Overweight  |
+| ≥ 30      | Obese       |
+
+Diet plans are assigned based on these categories.
 
 
 ## 🎥 Demo Video
